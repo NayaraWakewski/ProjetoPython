@@ -232,12 +232,12 @@ Explore nosso projeto de BI e mergulhe nas visualizações dinâmicas através d
 ## Licença
 
 Este projeto é disponibilizado sob a Licença MIT, que oferece ampla liberdade para uso pessoal e comercial, desde que o código original e os direitos autorais sejam mantidos. A Licença MIT é reconhecida por sua simplicidade e flexibilidade, permitindo a redistribuição e modificação do código sob os termos que garantem a atribuição adequada ao autor original. Para mais detalhes, consulte o arquivo LICENSE incluído neste repositório.
----
+
 
 ## Como usar este repositório
 
 Este repositório está organizado em várias pastas que correspondem às etapas do processo de engenharia de dados e análise de dados. Para reproduzir o projeto, siga os passos contidos em cada pasta, começando pela Engenharia de Dados se for utlizar o Airflow para Configuração e Criação das Tabelas no STAGE e DW ou; pode iniciar pela pasta de Criação_DB_Stage que segue extraindo, criando as tabelas e inserindo os dados e na sequencia  a pasta com as análises do banco de dados e DataViz.
-
+**DICA**: Lembrar de trocar a conexão com o banco de dados em todos os scripts.
 
 ## Team:
 
