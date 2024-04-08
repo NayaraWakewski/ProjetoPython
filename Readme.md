@@ -119,7 +119,7 @@ Especificação dos campos e tipos de dados utilizados nas tabelas do banco de d
 O Banco de Dados Airflow no Schema Stage foi criado para ser o nosso Banco de Dados Transacional, onde podemos executar as operações de análises dos dados e tratamentos, sem ter que utilizar o banco de produção.
 No Stage, temos duas tabelas, que correspondem as tabelas de Convênios e Contratos.
 
-Na execução do Script, contém uma função que cria um dicionário ds páginas da API, o qual é possível escolher os números páginas para extração. Nesse projeto escolhemos 10 páginas.
+Na execução do Script, contém uma função que cria um dicionário ds páginas da API, o qual é possível escolher os números páginas para extração. Nesse projeto escolhemos 100 páginas.
 
 ## Análise Exploratória Inicial no Banco de Dados Stage
 
@@ -212,7 +212,7 @@ No Data Warehouse, estruturamos uma série de tabelas fundamentais para a organi
 - `fato_contratos`: Tabela fato que compila dados transacionais de contratos.
 - `fato_convenios`: Similarmente, agrupa informações transacionais de convênios.
 
-Observamos que as estruturas das tabelas de Convênios e Contratos compartilham colunas idênticas, o que nos levou a unificar as dimensões, enquanto mantivemos tabelas fato distintas para cada tipo de dado. Essa decisão estratégica não só otimizou nosso Data Warehouse ao reduzir a redundância de tabelas, mas também melhorou a eficiência da consulta de dados, permitindo análises precisas por meio das relações estabelecidas entre as dimensões e as tabelas fato.relacionamentos com as dimensões. Isos otimiza a nossa Data Warehouse, diminuindo a quantidade de tabelas no banco de dados.
+Observamos que as estruturas das tabelas de Convênios e Contratos compartilham colunas idênticas, o que nos levou a unificar as dimensões, enquanto mantivemos tabelas fato distintas para cada tipo de dado. Essa decisão estratégica não só otimizou nosso Data Warehouse ao reduzir a redundância de tabelas, mas também melhorou a eficiência da consulta de dados, permitindo análises precisas por meio das relações estabelecidas entre as dimensões e as tabelas fato.relacionamentos com as dimensões. Isso otimiza a nossa Data Warehouse, diminuindo a quantidade de tabelas no banco de dados. PS. Falta atualizar os ids nas fatos.
 
 
 ## Análise Exploratória e Estatística DW
