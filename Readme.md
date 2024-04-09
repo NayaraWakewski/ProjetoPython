@@ -1,4 +1,4 @@
-![logo](logo_gov_ce.png)
+# ![logo](logo_gov_ce.png)
 
 # Projeto Análise Convênios e Contratos do Governo do Estado do Ceará
 
@@ -119,7 +119,7 @@ Especificação dos campos e tipos de dados utilizados nas tabelas do banco de d
 O Banco de Dados Airflow no Schema Stage foi criado para ser o nosso Banco de Dados Transacional, onde podemos executar as operações de análises dos dados e tratamentos, sem ter que utilizar o banco de produção.
 No Stage, temos duas tabelas, que correspondem as tabelas de Convênios e Contratos.
 
-Na execução do Script, contém uma função que cria um dicionário ds páginas da API, o qual é possível escolher os números páginas para extração. Nesse projeto escolhemos 100 páginas.
+Na execução do Script, contém uma função que cria um dicionário ds páginas da API, o qual é possível escolher os números páginas para extração. Nesse projeto escolhemos 10 páginas.
 
 ## Análise Exploratória Inicial no Banco de Dados Stage
 
@@ -212,7 +212,7 @@ No Data Warehouse, estruturamos uma série de tabelas fundamentais para a organi
 - `fato_contratos`: Tabela fato que compila dados transacionais de contratos.
 - `fato_convenios`: Similarmente, agrupa informações transacionais de convênios.
 
-Observamos que as estruturas das tabelas de Convênios e Contratos compartilham colunas idênticas, o que nos levou a unificar as dimensões, enquanto mantivemos tabelas fato distintas para cada tipo de dado. Essa decisão estratégica não só otimizou nosso Data Warehouse ao reduzir a redundância de tabelas, mas também melhorou a eficiência da consulta de dados, permitindo análises precisas por meio das relações estabelecidas entre as dimensões e as tabelas fato.relacionamentos com as dimensões. Isso otimiza a nossa Data Warehouse, diminuindo a quantidade de tabelas no banco de dados. PS. Falta atualizar os ids nas fatos.
+Observamos que as estruturas das tabelas de Convênios e Contratos compartilham colunas idênticas, o que nos levou a unificar as dimensões, enquanto mantivemos tabelas fato distintas para cada tipo de dado. Essa decisão estratégica não só otimizou nosso Data Warehouse ao reduzir a redundância de tabelas, mas também melhorou a eficiência da consulta de dados, permitindo análises precisas por meio das relações estabelecidas entre as dimensões e as tabelas fato.relacionamentos com as dimensões. Isos otimiza a nossa Data Warehouse, diminuindo a quantidade de tabelas no banco de dados.
 
 
 ## Análise Exploratória e Estatística DW
@@ -231,13 +231,14 @@ Explore nosso projeto de BI e mergulhe nas visualizações dinâmicas através d
 
 ## Licença
 
-Este projeto é disponibilizado sob a Licença MIT, que oferece ampla liberdade para uso pessoal e comercial, desde que o código original e os direitos autorais sejam mantidos. A Licença MIT é reconhecida por sua simplicidade e flexibilidade, permitindo a redistribuição e modificação do código sob os termos que garantem a atribuição adequada ao autor original. Para mais detalhes, consulte o arquivo LICENSE incluído neste repositório.
+Este projeto é disponibilizado sob a Licença MIT, que oferece ampla liberdade para uso pessoal e comercial, desde que o código original e os direitos autorais sejam mantidos. A Licença MIT é reconhecida por sua simplicidade e flexibilidade, permitindo a redistribuição e modificação do código sob os termos que garatem a atribuição adequada ao autor original. Para mais detalhes, consulte o arquivo LICENSE incluído neste repositório.
 
 
 ## Como usar este repositório
 
 Este repositório está organizado em várias pastas que correspondem às etapas do processo de engenharia de dados e análise de dados. Para reproduzir o projeto, siga os passos contidos em cada pasta, começando pela Engenharia de Dados se for utlizar o Airflow para Configuração e Criação das Tabelas no STAGE e DW ou; pode iniciar pela pasta de Criação_DB_Stage que segue extraindo, criando as tabelas e inserindo os dados e na sequencia  a pasta com as análises do banco de dados e DataViz.
-**DICA**: Lembrar de trocar a conexão com o banco de dados em todos os scripts.
+DICA: Lembrar de trocar a conexão engine em todos os scripts.
+
 
 ## Team:
 
