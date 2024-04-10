@@ -143,8 +143,8 @@ if __name__ == "__main__":
     criar_schema_se_nao_existir(engine, 'stage')
     
     # Obtém os dados dos contratos e dos convênios
-    df_contratos = obter_dados(url_contratos, 100)
-    df_convenios = obter_dados(url_convenios, 100)
+    df_contratos = obter_dados(url_contratos, 10)
+    df_convenios = obter_dados(url_convenios, 10)
     
     # Define as colunas de chave única para os contratos e convênios
     colunas_chave_unica_contratos = ['cpf_cnpj_financiador', 'num_contrato', 'data_assinatura']

@@ -126,3 +126,16 @@ def pipeline_etl(engine, esquema, nome_tabela):
 # Executando o ETL para as tabelas 'contratos' e 'convenios' no esquema 'stage'
 for tabela in ['contratos', 'convenios']:
     pipeline_etl(engine, 'stage', tabela)
+
+# Função para exportar tabela para CSV
+def exportar_para_csv(engine, esquema, nome_tabela, caminho_do_arquivo):
+    query = f"SELECT * FROM {esquema}.{nome_tabela};"
+    with engine.connect() as conexao:
+        df = pd.read_sql(query, conexao)
+        df.to_csv(caminho_do_arquivo, index=False, encoding='utf-8-sig')
+    print(f"Tabela '{esquema}.{nome_tabela}' exportada para {caminho_do_arquivo}")
+
+# Executando a exportação para as tabelas 'contratos' e 'convenios' no esquema 'stage'
+for tabela in ['contratos', 'convenios']:
+    caminho_do_arquivo_csv = f"{tabela}.csv"  # ou especifique um caminho absoluto
+    exportar_para_csv(engine, 'stage', tabela, caminho_do_arquivo_csv)

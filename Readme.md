@@ -226,7 +226,7 @@ As análises realizadas forneceram insights valiosos sobre a eficácia das polí
 
 Para dar vida aos dados e facilitar a interpretação das análises realizadas, utilizamos o Power BI. Com ela, criamos dashboards interativos e relatórios detalhados que destacam as tendências, padrões e insights dos convênios e contratos do Governo do Estado do Ceará.
 
-Explore nosso projeto de BI e mergulhe nas visualizações dinâmicas através do [link do nosso projeto no Power BI](www.d.com.br).
+Explore nosso projeto de BI e mergulhe nas visualizações dinâmicas através do [link do nosso projeto no Power BI](https://app.powerbi.com/view?r=eyJrIjoiZjAxODMxYTEtYzM4Ny00Nzc5LWEwYTAtMDAwMDc5ZjVhNWQ5IiwidCI6ImIxNTZhNTQxLWUyMzYtNGVkYi05MWJmLWZjYTI1YzcwMDRmOSJ9).
 
 
 ## Licença
